@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Read = () => {
     const [data , setData] = useState([]);
+    const [darkMode, setDarkMode] = useState("");
 
 
 
@@ -33,9 +34,26 @@ const Read = () => {
         localStorage.setItem("email", email);  
     }
 
+    function handleDarkMode() {
+        if(darkMode === "table-dark") {
+            setDarkMode("");
+        } else {
+            setDarkMode("table-dark");
+        }
+    }
+
     return (
         <>
-            <table className="table">
+            <div className='d-flex mb-5 mt-5 justify-content-between'>
+                <div className="form-check form-switch ">
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onClick={() => handleDarkMode()} />
+                    <label className="form-check-label">Enable Dark Mode</label>
+                </div>
+                <Link to={"/"}>
+                <button className='btn btn-primary'>Create</button>
+                </Link>
+           </div>
+            <table className={`table ${darkMode}`}>
                 <thead>
                     <tr>
                         <th scope="col">#</th>

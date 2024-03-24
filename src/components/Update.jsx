@@ -46,8 +46,13 @@ const Update = () => {
 
               </div>
 
-              <button type="submit" className="btn btn-primary" onClick={handleUpdate}>Update</button>
+              <div className="d-flex">
+                  <button type="submit" className="btn btn-primary " onClick={handleUpdate}>Update</button>
+                  <button className="btn btn-primary mx-2" onClick={() => { navigate('/read') }}>Back</button>
+            </div>
           </form>
+
+        
       </>
   )
 }
