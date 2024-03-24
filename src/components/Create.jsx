@@ -9,18 +9,18 @@ const Create = () => {
     const navigate = useNavigate();
 
 
-    const handleSubmit = (e) => {
-        if(name === "") return ;
-        e.preventDefault();
-        console.log("clicked");
-        axios.post(
-            "https://65ff0107df565f1a6144a286.mockapi.io/crud-react",
-            { name: name, email: email },
-        )   
-        .then(()=> {
-            navigate("/read");
-        })
-    };
+    // const handleSubmit = (e) => {
+    //     if(name === "") return ;
+    //     e.preventDefault();
+    //     console.log("clicked");
+    //     axios.post(
+    //         "https://65ff0107df565f1a6144a286.mockapi.io/crud-react",
+    //         { name: name, email: email },
+    //     )   
+    //     .then(()=> {
+    //         navigate("/read");
+    //     })
+    // };
 
 
     return (

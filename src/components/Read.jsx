@@ -8,25 +8,25 @@ const Read = () => {
 
 
 
-    function getData() {
-        axios.get('https://65ff0107df565f1a6144a286.mockapi.io/crud-react')
-        .then((res)=>{
-            console.log(res.data);
-            setData(res.data);
+    // function getData() {
+    //     axios.get('https://65ff0107df565f1a6144a286.mockapi.io/crud-react')
+    //     .then((res)=>{
+    //         console.log(res.data);
+    //         setData(res.data);
         
-        })
-    }
+    //     })
+    // }
 
     useEffect(() => {
      getData();
     }, [])
 
-    function handleDelete(id) {
-        axios.delete(`https://65ff0107df565f1a6144a286.mockapi.io/crud-react/${id}`)
-        .then(()=> {
-            getData();
-        })
-    }
+    // function handleDelete(id) {
+    //     axios.delete(`https://65ff0107df565f1a6144a286.mockapi.io/crud-react/${id}`)
+    //     .then(()=> {
+    //         getData();
+    //     })
+    // }
 
     function setLocalStorage(id, name , email) {
         localStorage.setItem("id", id);

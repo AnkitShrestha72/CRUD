@@ -16,18 +16,18 @@ const Update = () => {
         setEmail(localStorage.getItem("email"));
     }, [])
 
-    const handleUpdate = (e) => {
-        e.preventDefault();
-        axios.put(`https://65ff0107df565f1a6144a286.mockapi.io/crud-react/${id}`,
-        {
-            name: name,
-            email: email,
-        }
-        )
-        .then(() => {
-            navigate('/read')
-        })
-    }
+    // const handleUpdate = (e) => {
+    //     e.preventDefault();
+    //     axios.put(`https://65ff0107df565f1a6144a286.mockapi.io/crud-react/${id}`,
+    //     {
+    //         name: name,
+    //         email: email,
+    //     }
+    //     )
+    //     .then(() => {
+    //         navigate('/read')
+    //     })
+    // }
 
 
   return (
